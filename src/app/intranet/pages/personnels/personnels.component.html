@@ -1,0 +1,65 @@
+<section>
+    <h1><span class="blue">&lt;</span>Personals Page<span class="blue">&gt;</span></h1>
+        <h2>Created by me</h2>
+
+        <!-- <div class="box">
+            <i class="fa-brands fa-searching"></i>
+            <input [(ngModel)]="filtreModelePersonnels" placeholder="Search" name="filtre" >
+        </div> -->
+        
+        <table class="container">
+            <thead>
+                <tr>
+                    <th><h1>Name</h1></th>
+                    <th><h1>Firstname</h1></th>
+                    <th><h1>Habilitation</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of compagnieService.personnels | personnel:filtreModelePersonnels" (click)="selectPersonnel(p.id)" >
+                    <td data-label="Account">{{p.data.nom}}</td>
+                    <td data-label="Due Date">{{p.data.prenom}}</td>
+                    <td data-label="Amount">{{p.data.habilitation}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <div class="box-main"> -->
+
+            <!-- Get PERSONALS data -->
+            <!-- =============================================================== -->
+            <!-- <form id="newProfile" #f="ngForm" *ngIf="personnel.data">
+                <h1 id="header">Personals Form</h1> -->
+    
+                <!-- PERSONAL NOM -->
+                <!-- <div class="float-label">
+                    <input [(ngModel)]="personnel.data.nom" name="nom" required placeholder="Name">
+                </div>
+                <br> -->
+    
+                <!-- PERSONAL PRENOM -->
+                <!-- <div class="float-label">
+                    <input [(ngModel)]="personnel.data.prenom" name="prenom" required placeholder="Firstname">
+                </div>
+                <br> -->
+    
+                <!-- PERSONAL HABILITATION -->
+                <!-- <div class="float-label">
+                    <select class="select-habilitation" name="habilitation" #ctlId="ngModel" [(ngModel)]="personnel.data.habilitation" required>
+                        <option selected hidden value="">Habilitation</option>
+                        <option value="Pilote">Pilote</option>
+                        <option value="Copilote">Copilote</option>
+                        <option value="PNC">PNC</option>
+                    </select>
+                </div>
+                <br>
+    
+                
+                <button (click)="addPersonnel(personnel.id)" name="add" id="sendData" [disabled]="f.invalid">Add</button>
+                <button (click)="updatePersonnel(personnel.id)" name="update" id="sendData" [disabled]="f.invalid">Update</button> 
+                <button (click)="deletePersonnel(personnel.id)" name="delete" id="sendData" [disabled]="f.invalid">Delete</button>
+                <button (click)="resetPersonnel()" type="reset" name="reset" id="sendData" [disabled]="f.invalid">Reset</button>
+            </form>
+        </div> -->
+
+</section>

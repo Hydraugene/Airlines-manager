@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <h2>Page de connexion</h2>
+    </div>
+    <div>
+        <form (submit)="checkFromFire()" #f="ngForm">
+            <label>Identifiant</label>
+            <input name="idUser" [(ngModel)]="id.id" required placeholder="Saisissez votre identifiant">
+            <label>Mot de passe</label>
+            <input type="password" name="password" [(ngModel)]="id.passe" required placeholder="saisissez votre mot de passe">
+            <input type="submit" value="Connexion" [disabled]="f.invalid">
+            <input type="reset" value="Annuler">
+        </form>
+    </div>
+</div>

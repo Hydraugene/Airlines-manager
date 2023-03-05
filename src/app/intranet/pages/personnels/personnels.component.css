@@ -1,0 +1,356 @@
+
+/*	
+	Table Responsive
+	===================
+	Author: https://github.com/pablorgarcia
+ */
+
+ @charset "UTF-8";
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+ 
+ body {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   line-height: 1.42em;
+   color:#A7A1AE;
+   background-color:#f8f8f8;
+ }
+ 
+ h1 {
+   font-size:3em; 
+   font-weight: 300;
+   line-height:1em;
+   text-align: center;
+   color: #4DC3FA;
+ }
+ 
+ h2 {
+   font-size:1em; 
+   font-weight: 300;
+   text-align: center;
+   display: block;
+   line-height:1em;
+   padding-bottom: 2em;
+   color: #FB667A;
+ }
+ 
+ h2 a {
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #FB667A;
+   text-decoration: none;
+ }
+ 
+ .blue { color: #185875; }
+ .yellow { color: #FFF842; }
+ 
+ .container th h1 {
+     font-weight: bold;
+     font-size: 1em;
+   text-align: left;
+   color: #185875;
+ }
+ 
+ .container td {
+     font-weight: normal;
+     font-size: 1em;
+   -webkit-box-shadow: 0 2px 2px -2px #f8f8f8;
+      -moz-box-shadow: 0 2px 2px -2px #f8f8f8;
+           box-shadow: 0 2px 2px -2px #f8f8f8;
+ }
+ 
+ .container {
+     text-align: left;
+     overflow: hidden;
+     width: 80%;
+     margin: 0 auto;
+   display: table;
+   padding: 0 0 2em 0;
+ }
+ 
+ .container td, .container th {
+     padding-bottom: 2%;
+     padding-top: 2%;
+   padding-left:2%;  
+ }
+ 
+ /* Background-color of the odd rows */
+ .container tr:nth-child(odd) {
+     background-color: #f8f8f8;
+ }
+ 
+ /* Background-color of the even rows */
+ .container tr:nth-child(even) {
+     background-color: #f8f8f8;
+ }
+ 
+ .container th {
+     background-color: #f8f8f8;
+ }
+ 
+ .container td:first-child { color: #FB667A; }
+ 
+ .container tr:hover {
+    background-color: #ddd;
+ -webkit-box-shadow: 0 6px 6px -6px #f8f8f8;
+      -moz-box-shadow: 0 6px 6px -6px #f8f8f8;
+           box-shadow: 0 6px 6px -6px #f8f8f8;
+ }
+ 
+ .container td:hover {
+   background-color: #FFF842;
+   color: #403E10;
+   font-weight: bold;
+   
+   box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+   transform: translate3d(6px, -6px, 0);
+   
+   transition-delay: 0s;
+     transition-duration: 0.4s;
+     transition-property: all;
+   transition-timing-function: line;
+ }
+ 
+ @media (max-width: 800px) {
+ .container td:nth-child(4),
+ .container th:nth-child(4) { display: none; }
+ }
+
+/*========================================================
+          Form Section
+========================================================*/
+form {
+  margin: 0 auto;
+  width: 50%;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding-bottom: 10px;
+}
+/*changing title style*/
+h1 {
+  padding-top: 30px;
+  text-align: center;
+  color: #4CAF50;
+  font-size: 26px;
+}
+
+/*Camera image to upload image*/
+.fa-camera-retro {
+    color: #a7a7a7;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    line-height: 100px;
+    border: 2px solid #a7a7a7;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+}
+
+.fa-camera-retro:hover{
+  border-color: #6f6f6f;
+  box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  color: #6f6f6f;
+}
+
+
+
+/*========================================================
+          input Section
+========================================================*/
+
+/*Float Label main style*/
+.float-label input, .float-label .select-habilitation {
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    background: transparent;
+    color: #757575;
+    padding: 5px 15px 7px 10px;
+}
+.float-label .select-habilitation{
+  text-align: center;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  background: transparent;
+  color: #757575;
+  font-weight: normal;
+  margin-left: 7px;
+}
+
+.gender, .birthday {
+    text-align: left;
+    padding-left: 16px;
+    margin-top: -10px;
+}
+
+.gender div, .birthday div {
+  display: inline-block;
+  padding-left: 0;
+}
+
+/*add style to radio options*/
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #77cee2;
+}
+.option-input:checked::before {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #77cee2;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input {
+  border-radius: 50%;
+}
+.option-input::after {
+  border-radius: 50%;
+}
+.radio-inline input[type=radio] {
+  position: static;
+  margin-left: 0;
+  padding-left: 0;
+}
+.radio-inline {
+  vertical-align: baseline;
+}
+.radio-inline span {
+  line-height: 4;
+  font-size: 16px;
+  padding-left: 4px;
+}
+
+ /*Style birthday select */
+.float-label select {
+  display: inline-block;
+  width: 24%;
+  margin-left: 20px;
+  font-size: 16px;
+  color: black;
+}
+
+
+
+.float-label > select option:first-child {
+  color: #77cee2;
+}
+
+
+
+/*========================================================
+          Button Section
+========================================================*/
+/*changing button box style*/
+#sendData , #sendData2{
+  width: 150px;
+  text-transform: uppercase;
+  outline: 0;
+  border-style: none;
+  background: #4CAF50;
+  padding: 2%;
+  color: white;
+  font-weight: 200;
+  font-size: 18px;
+  box-shadow: rgba(0, 0, 0, 0.8);
+}
+
+.failure {
+  color: #4CAF50;
+}
+
+/*change message*/
+#login, #create, #signOut {
+  text-decoration: none;
+  color: #4CAF50;
+  background: transparent;
+  border: none;
+}
+
+.message a:hover {
+  color: black;
+}
+
+/*========================================================
+          Search Section
+========================================================*/
+
+
+.box {
+  width: 25%;
+  height: 50px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 2% 10%;
+}
+
+.box>i {
+font-size: 20px;
+color: #777;
+}
+
+.box>input {
+flex: 1;
+height: 40px;
+border-radius: 20px;
+outline: none;
+font-size: 18px;
+padding-left: 10px;
+background-color: #f8f8f8;
+}

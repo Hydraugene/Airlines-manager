@@ -1,0 +1,30 @@
+<div>
+    <p>
+        Vous êtes {{user.prenom}} {{user.nom}}
+    </p>
+    <p>Votre status est {{user.status}}</p>
+</div>
+<div>
+    <form id="newProfile" (submit)="update()" #f="ngForm">
+    <h1 id="header">Update Your Profile</h1>
+    <h1></h1>
+    <!-- USER NAME -->
+    <div class="float-label">
+        <input #ctlId="ngModel" [(ngModel)]="userService.user.nom" name="nom" id="userName" required placeholder="Name">
+    </div>
+    <br>
+
+    <!-- USER FIRSTNAME -->
+    <div class="float-label">
+        <input #ctlId="ngModel" [(ngModel)]="userService.user.prenom" id="userName" name="prenom" required placeholder="Firstname">
+    </div>
+    <br>
+
+
+
+
+    <button type="submit" name="button" id="sendData" [disabled]="f.invalid">Update</button>
+    <button type="reset" name="button" id="sendData" [disabled]="f.invalid">Reset</button>
+
+    </form>
+</div>

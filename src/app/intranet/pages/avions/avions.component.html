@@ -1,0 +1,77 @@
+<section>
+
+    <h1><span class="blue">&lt;</span>Airplanes Page<span class="blue">&gt;</span></h1>
+    <h2>List of aircraft available</h2>
+
+    <!-- <div class="box">
+        <i class="fa-brands fa-searching"></i>
+        <input [(ngModel)]="filtreModeleAvions" placeholder="Search" name="filtre" >
+    </div> -->
+    
+    <table class="container">
+        <thead>
+            <tr>
+                <th><h1>Modele</h1></th>
+                <th><h1>Code</h1></th>
+                <th><h1>Capacite</h1></th>
+                <th><h1>Autonomie</h1></th>
+                <th><h1>Type</h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let av of compagnies.avions | modele:filtreModeleAvions" (click)="selectAvion(av.code)" >
+                <td data-label="Account">{{av.modele}}</td>
+                <td data-label="Due Date">{{av.code}}</td>
+                <td data-label="Amount">{{av.capacite}}</td>
+                <td data-label="Amount">{{av.autonomie}}</td>
+                <td data-label="Period">{{av.type}}</td>
+              </tr>
+        </tbody>
+    </table>
+
+      <div class="box-main">
+
+        <!-- Get AIRPLANE data -->
+        <!-- =============================================================== -->
+        <!-- <form id="newProfile"  #f="ngForm" *ngIf="avion">
+            <h1 id="header">Airplane Form</h1>
+
+            
+            <div class="float-label">
+                <input [(ngModel)]="avion.code" name="code" required placeholder="Code">
+            </div>
+            <br>
+
+            
+            <div class="float-label">
+                <input [(ngModel)]="avion.modele" name="modele" required placeholder="Modele">
+            </div>
+            <br>
+
+            
+            <div class="float-label">
+                <input [(ngModel)]="avion.capacite" name="capacite" required placeholder="Capacite">
+            </div>
+            <br>
+
+            
+            <div class="float-label">
+                <input [(ngModel)]="avion.autonomie" name="autonomie" placeholder="Autonomie">
+            </div>
+            <br>
+
+            
+            <div class="float-label">
+                <input [(ngModel)]="avion.type" name="type" placeholder="Type" >
+            </div>
+            <br>
+            
+            <button (click)="addAvion(avion.code)" name="add" id="sendData" [disabled]="f.invalid">Add</button>
+            <button (click)="updateAvion(avion.code)" name="update" id="sendData" [disabled]="f.invalid">Update</button>
+            <button (click)="deleteAvion(avion.code)" name="delete" id="sendData" [disabled]="f.invalid">Delete</button>
+            <button (click)="resetAvion()" type="reset" name="reset" id="sendData" [disabled]="f.invalid">Reset</button>
+        </form> -->
+    </div>
+
+
+</section>

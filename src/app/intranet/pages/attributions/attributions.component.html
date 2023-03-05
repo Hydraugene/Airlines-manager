@@ -1,0 +1,37 @@
+<section>
+    <h3>liste des vols dont le personnel doit être attribué</h3>
+    <!-- <div class="box">
+        <i class="fa-brands fa-searching"></i>
+        <input [(ngModel)]="filtreModeleAttribution" placeholder="Search" name="filtre" >
+    </div> -->
+    <article>
+        <table>
+            <thead>
+                <tr>
+                    <td>code</td>
+                    <td>Modèle d'avion</td>
+                    <td>Date</td>
+                    <td>Durée</td>
+                    <td>Départ</td>
+                    <td>Arrivée</td>
+                    <td>Personnel à bord</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of compagnies.vols"  (click)="selectVols(v.id)" >
+                    <td data-label="Account">{{v.data.code}}</td>
+                    <td data-label="Due Date">{{v.data.avion}}</td>
+                    <td data-label="Amount">{{v.data.date}}</td>
+                    <td data-label="Amount">{{v.data.duree}}</td>
+                    <td data-label="Amount">{{v.data.aeroportDepart}}</td>
+                    <td data-label="Amount">{{v.data.aeroportArrive}}</td>
+                    <td data-label="Amount">
+                        <ul *ngFor="let p of v.data.personnel">
+                            <li>{{p.nom}}, {{p.prenom}} | {{p.habilitation}}</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>

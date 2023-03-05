@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Fluggesellschaft-Geshaftsfuhrer:build:production",
+            "firebaseProject": "airline-manager-c9a48",
+            "firebaseHostingSite": "airline-manager-c9a48"
+          }
         }
       }
     }

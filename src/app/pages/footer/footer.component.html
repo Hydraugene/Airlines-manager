@@ -1,0 +1,10 @@
+<section>
+    <div class="footer-basic">
+        <ul class="list-inline">
+            <li class="list-inline-item" *ngIf="!authService.auth.currentUser"><a routerLink="/" href >Connection</a></li>
+            <li class="list-inline-item" *ngIf="authService.auth.currentUser"><a routerLink="/" href (click)="authService.signOut()">Déconnexion</a></li>
+            <li class="list-inline-item"><a routerLink="/mentions" href >Mentions Legales</a></li>
+        </ul>
+        <p class="copyright">Fluggesellschaft-Geshaftsfuhrer © 2023</p>
+    </div>
+</section>

@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Fluggesellschaft-Geshaftsfuhrer';
+  public message : string = "Willkommen an Bord"
 }
